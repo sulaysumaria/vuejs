@@ -5,7 +5,7 @@
     <title>
       VueJS Tutorials
     </title>
-    <link href="styles.css" ref="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
     <script src="https://unpkg.com/vue"></script>
   </head>
   <body>
@@ -13,11 +13,25 @@
       <h1>
         {{ greet("night") }}
       </h1>
+
       <p>Name: {{ name }}</p>
       <p>Job: {{ job }}</p>
+
       <a :href="website" target="_blank">Sulay Sumaria</a>
+
       <input type="text" :value="name" />
+
       <p v-html="websiteTag"></p>
+
+      <button @click="addYear(1)">Add a year</button>
+      <button @click="subtractYear(1)">Subtract a year</button>
+
+      <button @dblclick="addYear(10)">Add 10 year</button>
+      <button @dblclick="subtractYear(10)">Subtract 10 year</button>
+
+      <p>My age is {{ age }}</p>
+
+      <div id="canvas" @mousemove="updateXY">{{ x }}, {{ y }}</div>
     </div>
     <script src="app.js"></script>
   </body>
