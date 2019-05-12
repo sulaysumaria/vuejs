@@ -104,6 +104,26 @@
       <p v-show="success">
         Success!!
       </p>
+
+      <h1>
+        Looping through lists
+      </h1>
+      <ul>
+        <li v-for="character in characters">
+          {{ character }}
+        </li>
+      </ul>
+      <ul>
+        <li v-for="(ninja, index) in ninjas">
+          {{ index }}. {{ ninja.name }} - {{ ninja.age }}
+        </li>
+      </ul>
+      <template v-for="(ninja, index) in ninjas">
+        <h3>{{ index }}. {{ ninja.name }} - {{ ninja.age }}</h3>
+      </template>
+      <template v-for="ninja in ninjas">
+        <div v-for="(val, key) in ninja">{{ key }} - {{ val }}</div>
+      </template>
     </div>
     <script src="app.js"></script>
   </body>

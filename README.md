@@ -20,3 +20,4 @@ $ http-server -c-1 .
 - Computed properties
 - Dynamic CSS Classes
 - Conditionals
+- Looping with v-for
