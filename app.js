@@ -8,7 +8,9 @@ new Vue({
       '<a href="https://sulaysumaria.github.io" target="_blank">Sulay Sumaria</a>',
     age: 23,
     x: 0,
-    y: 0
+    y: 0,
+    a: 0,
+    b: 0
   },
   methods: {
     greet(time) {
@@ -32,6 +34,14 @@ new Vue({
     },
     logAge() {
       console.log("You have entered age.");
+    }
+  },
+  computed: {
+    addToA() {
+      return this.age + this.a;
+    },
+    addToB() {
+      return this.age + this.b;
     }
   }
 });
