@@ -1,26 +1,35 @@
-# VueJS-CrashCourse
+# vuejs-crashcourse
 
-### Running locally
+## Project setup
 
-```bash
-$ git clone
-$ cd vuejs-crashcourse
-$ npm i -g http-server
-$ http-server -c-1 .
+```
+npm install
 ```
 
-## Topics covered
+### Compiles and hot-reloads for development
 
-- Data and Methods
-- Data binding
-- Events
-- Event modifiers
-- Keyboard events
-- Two way data binding
-- Computed properties
-- Dynamic CSS Classes
-- Conditionals
-- Looping with v-for
-- Multiple vue instances
-- Components
-- Referencing with $refs
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+
+```
+npm run build
+```
+
+### Run your tests
+
+```
+npm run test
+```
+
+### Lints and fixes files
+
+```
+npm run lint
+```
+
+### Customize configuration
+
+See [Configuration Reference](https://cli.vuejs.org/config/).
