@@ -1,31 +1,26 @@
-const one = new Vue({
-  el: "#vue-app-one",
-  data: {
-    title: "Vue App One"
-  },
-  methods: {},
-  computed: {
-    greet() {
-      return "Hello from app one.";
-    }
-  }
-});
-
-const two = new Vue({
-  el: "#vue-app-two",
-  data: {
-    title: "Vue App Two"
+Vue.component("greeting", {
+  template: `
+    <p>
+      I am a re-usable component. -{{name}}
+      <button @click="changeName">Change Name</button>
+    </p>
+  `,
+  data() {
+    return {
+      name: "Sulay"
+    };
   },
   methods: {
-    changeTitle() {
-      one.title = "New title";
-    }
-  },
-  computed: {
-    greet() {
-      return "Hello from app two.";
+    changeName() {
+      this.name = "Mario";
     }
   }
 });
 
-two.title = "Changed from outside";
+new Vue({
+  el: "#vue-app-one"
+});
+
+new Vue({
+  el: "#vue-app-two"
+});

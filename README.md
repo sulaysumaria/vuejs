@@ -22,3 +22,4 @@ $ http-server -c-1 .
 - Conditionals
 - Looping with v-for
 - Multiple vue instances
+- Components
