@@ -10,6 +10,72 @@
   </head>
   <body>
     <div id="vue-app">
+      <h1>
+        {{ greet("night") }}
+      </h1>
+
+      <h1>
+        Data Binding
+      </h1>
+      <p>Name: {{ name }}</p>
+      <p>Job: {{ job }}</p>
+
+      <a :href="website" target="_blank">Sulay Sumaria</a>
+
+      <input type="text" :value="name" />
+
+      <p v-html="websiteTag"></p>
+
+      <h1>
+        Events
+      </h1>
+      <button @click.once="addYear(1)">Add a year</button>
+      <button @click="subtractYear(1)">Subtract a year</button>
+
+      <button @dblclick="addYear(10)">Add 10 year</button>
+      <button @dblclick="subtractYear(10)">Subtract 10 year</button>
+
+      <p>My age is {{ age }}</p>
+
+      <div id="canvas" @mousemove="updateXY">{{ x }}, {{ y }}</div>
+
+      <h1>
+        Event modifiers
+      </h1>
+      <a
+        @click.prevent="click"
+        href="https://sulaysumaria.github.io"
+        target="_blank"
+      >
+        Sulay Sumaria
+      </a>
+
+      <h1>
+        Two way data binding
+      </h1>
+
+      <label>Name</label>
+      <input type="text" v-model="name" />
+      <span>{{ name }}</span>
+      <label>Age</label>
+      <input type="text" v-model="age" />
+      <span>{{ age }}</span>
+
+      <h1>
+        Computed Properties
+      </h1>
+
+      <button @click="a++">Add to A</button>
+      <button @click="b++">Add to B</button>
+      <p>A - {{ a }}</p>
+      <p>B - {{ b }}</p>
+      <p>Age + a = {{ addToA }}</p>
+      <p>Age + b = {{ addToB }}</p>
+
+      <h1>
+        Dynamic CSS Classes
+      </h1>
+
       <div :class="{available: available}" @click="available = !available">
         <span>Sulay</span>
       </div>
@@ -21,49 +87,23 @@
       </div>
 
       <h1>
-        {{ greet("night") }}
+        Conditionals
       </h1>
 
-      <p>Name: {{ name }}</p>
-      <p>Job: {{ job }}</p>
-
-      <a :href="website" target="_blank">Sulay Sumaria</a>
-
-      <input type="text" :value="name" />
-
-      <p v-html="websiteTag"></p>
-
-      <button @click.once="addYear(1)">Add a year</button>
-      <button @click="subtractYear(1)">Subtract a year</button>
-
-      <button @dblclick="addYear(10)">Add 10 year</button>
-      <button @dblclick="subtractYear(10)">Subtract 10 year</button>
-
-      <p>My age is {{ age }}</p>
-
-      <div id="canvas" @mousemove="updateXY">{{ x }}, {{ y }}</div>
-
-      <a
-        @click.prevent="click"
-        href="https://sulaysumaria.github.io"
-        target="_blank"
-      >
-        Sulay Sumaria
-      </a>
-
-      <label>Name</label>
-      <input type="text" v-model="name" />
-      <span>{{ name }}</span>
-      <label>Age</label>
-      <input type="text" v-model="age" />
-      <span>{{ age }}</span>
-
-      <button @click="a++">Add to A</button>
-      <button @click="b++">Add to B</button>
-      <p>A - {{ a }}</p>
-      <p>B - {{ b }}</p>
-      <p>Age + a = {{ addToA }}</p>
-      <p>Age + b = {{ addToB }}</p>
+      <button @click="error = !error">Toggle Error</button>
+      <button @click="success = !success">Toggle Success</button>
+      <p v-if="error">
+        There is an error.
+      </p>
+      <p v-else-if="success">
+        Success
+      </p>
+      <p v-show="error">
+        There is a second error.
+      </p>
+      <p v-show="success">
+        Success!!
+      </p>
     </div>
     <script src="app.js"></script>
   </body>
