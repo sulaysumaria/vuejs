@@ -23,3 +23,4 @@ $ http-server -c-1 .
 - Looping with v-for
 - Multiple vue instances
 - Components
+- Referencing with $refs

@@ -9,21 +9,18 @@
     <script src="https://unpkg.com/vue"></script>
   </head>
   <body>
-    <h1>
-      Multiple Vue instances
-    </h1>
-    <div id="vue-app-one">
+    <div id="vue-app">
       <h2>
-        Vue App One
+        Refs
       </h2>
-      <greeting></greeting>
-    </div>
+      <input type="text" ref="input" />
+      <button @click="readRefs">Submit</button>
 
-    <div id="vue-app-two">
-      <h2>
-        Vue App Two
-      </h2>
-      <greeting></greeting>
+      <p>Your favourite food: {{ output }}</p>
+
+      <div ref="test">
+        Hello
+      </div>
     </div>
     <script src="app.js"></script>
   </body>
