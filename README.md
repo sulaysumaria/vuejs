@@ -21,3 +21,4 @@ $ http-server -c-1 .
 - Dynamic CSS Classes
 - Conditionals
 - Looping with v-for
+- Multiple vue instances
