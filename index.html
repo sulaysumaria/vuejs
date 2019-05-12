@@ -10,6 +10,16 @@
   </head>
   <body>
     <div id="vue-app">
+      <div :class="{available: available}" @click="available = !available">
+        <span>Sulay</span>
+      </div>
+
+      <button @click="available = !available">Toggle Available</button>
+      <button @click="nearby = !nearby">Toggle Nearby</button>
+      <div :class="compClasses">
+        <span>Sumaria</span>
+      </div>
+
       <h1>
         {{ greet("night") }}
       </h1>
