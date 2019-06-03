@@ -1,28 +1,27 @@
 <template>
-  <div id="app">
-    <h1>{{title}}</h1>
-    <Names></Names>
+  <div>
+    <app-header></app-header>
+    <Ninjas></Ninjas>
+    <app-footer></app-footer>
   </div>
 </template>
 
 <script>
-import Names from "./names";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Ninjas from "./components/Ninjas";
 
 export default {
-  name: "app",
   components: {
-    Names
+    "app-header": Header,
+    "app-footer": Footer,
+    Ninjas
   },
   data() {
-    return {
-      title: "My First App"
-    };
+    return {};
   }
 };
 </script>
 
-<style scoped>
-h1 {
-  color: purple;
-}
+<style>
 </style>
